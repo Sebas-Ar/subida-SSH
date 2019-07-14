@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import BarraNavPrincipal from './component/BarraNavPrincipal';
+import BarraNavDeslizable from "./component/BarraNavDeslizable";
+import Footer from './component/Footer';
+import SliderFotos from './component/SliderFotos';
+import Presentacion from './component/Presentacion';
+import Tarjetas from './component/Tarjetas';
+import Descripcion from './component/Descripcion';
+import Seccion from './component/Seccion';
+import Detalles from './component/Detalles';
+import Whatsapp from './component/Whatsapp';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import icon1 from './img/icon1.png';
+import icon2 from './img/icon2.png';
+import icon3 from './img/icon3.png';
+import icon4 from './img/icon4.png';
+
+/* window.onscroll = function () {
+    console.log("Vertical: " + window.scrollY);
+    console.log("Horizontal: " + window.scrollX);
+
+}; */
+
+export default class App extends Component {
+
+    render() {
+        return (
+            <div>
+                <BarraNavPrincipal />
+                <BarraNavDeslizable />
+                <SliderFotos />
+                <Presentacion />
+                <div className="contenedor-tarjetas">
+                    <Tarjetas titulo="WEDDINGS" icono={icon1} texto="Establecido hace demasiado tiempo que un lector se distraerá con el contenido." />
+                    <Tarjetas titulo="LANDSCAPES" icono={icon2} texto="Establecido hace demasiado tiempo que un lector se distraerá con el contenido." />
+                    <Tarjetas titulo="PRODUCTS" icono={icon3} texto="Establecido hace demasiado tiempo que un lector se distraerá con el contenido." />
+                    <Tarjetas titulo="VIDEOS" icono={icon4} texto="Establecido hace demasiado tiempo que un lector se distraerá con el contenido." />
+                </div>
+                <Descripcion />
+                <Seccion />
+                <Detalles />
+                <Whatsapp />
+                <Footer />
+            </div>
+        )
+    }
 }
-
-export default App;

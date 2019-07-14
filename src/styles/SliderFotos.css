@@ -1,0 +1,110 @@
+.SliderFotos h1, .SliderFotos h3, .SliderFotos .linea, .SliderFotos .marco, .SliderFotos .img, .SliderFotos p {
+    position: absolute;
+}
+
+.SliderFotos h1, .SliderFotos h3, .SliderFotos .linea{
+    color: #efe5dd;
+}
+
+.SliderFotos {
+    padding-top: 10px;
+    margin-top: 0;
+    height: 50vmax;
+}
+
+.SliderFotos img {
+    left: 54%;
+    transform: translate(-40%);
+    width: 45%;
+}
+
+.SliderFotos .marco {
+    margin-top:2%;
+    left: 50%;
+    transform: translate(-26%);
+    width: 45%;
+}
+
+.SliderFotos h1 {
+    text-align: right;
+    font-size: 7.5vw;
+    right: 6%;
+}
+.SliderFotos h3 {
+    margin-top:25%;
+    text-align: right;
+    font-size: 1.5vw;
+    right: 6%;
+}
+
+.SliderFotos p {
+    margin-top:38%;
+    text-align: right;
+    font-size: 2.3vw;
+    right: 52%;
+}
+
+.SliderFotos p a {
+    text-decoration: none;
+    color: #efe5dd;
+}
+
+.SliderFotos .linea {
+    right: 41%;
+    background: #efe5dd;
+    width: 8.5vw;
+    margin-top:39.2%;
+    height: 1px;
+    border: 1px solid #efe5dd;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .SliderFotos {
+        margin-top: 20px;
+        height: 58vmax;
+    }
+
+    .SliderFotos img {
+        left: 43%;
+        width: 55%;
+    }
+
+    .SliderFotos .marco {
+        margin-top:2%;
+        left: 38%;
+        transform: translate(-26%);
+        width: 55%;
+    }
+
+    .SliderFotos h1 {
+        font-size: 8vw;
+        right: 8%;
+        margin-top: 12%;
+    }
+
+    .SliderFotos h3 {
+        margin-top:34%;
+        font-size: 1.8vw;
+        right: 8%;
+    }
+
+    .SliderFotos p {
+        margin-top:45%;
+        font-size: 3vw;
+        right: 61%;
+    }
+
+    .SliderFotos .linea {
+        right: 47%;
+        width: 11vw;
+        margin-top:46.6%;
+    }
+    
+}
+
+@media screen and (max-width: 750px) {
+    .SliderFotos {
+        margin-top: 70px;
+    }
+}

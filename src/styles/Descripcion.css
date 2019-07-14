@@ -1,0 +1,34 @@
+.Descripcion {
+    height: 580px;
+    margin: 100px 40px 40px 50px;
+    display: grid;
+    color: #efe5dd;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: .5fr 2fr 3fr;
+}
+.Descripcion img {
+    height: 543px;
+    grid-column: 3/4;
+    grid-row: 1/4;
+}
+
+.Descripcion h5 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin: 0;
+    grid-column: 1/3;
+}
+.Descripcion h2 {
+    letter-spacing: 5px;
+    font-size: 44px;
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.Descripcion p {
+    color: #94867c;
+    font-size: 18px;
+    line-height: 25px;
+    margin-right: 32px;
+}
+

@@ -1,0 +1,170 @@
+.BarraNavDeslizable header {
+  width: 100%;
+  height: 50px;
+  background: none;
+}
+
+.BarraNavDeslizable header img {
+  display: none;
+  margin: 10px;
+  position: fixed;
+}
+
+.pantalla {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300vh;
+  height: 100vh;
+  background: #0e0e0fcc;
+  z-index: 4000;
+  transform: translate(100%);
+}
+
+.BarraNavDeslizable nav {
+    display: none;
+    background: #1b1b1d;
+    height: 100vh;
+    width: 233px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0;
+    transform: translate(100%);
+    z-index: 4200;
+
+}
+
+.BarraNavDeslizable nav ul {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.BarraNavDeslizable nav ul li {
+    list-style: none;
+    border-top: 1px solid #ffffff10;
+    padding: 13px;
+}
+
+.BarraNavDeslizable nav ul li:nth-child(5){
+    border-bottom: 1px solid #ffffff10;
+}
+
+.BarraNavDeslizable nav ul li a {
+    text-decoration: none;
+    color: #efe5dd;
+}
+
+.BarraNavDeslizable nav ul li a:hover {
+    text-decoration: none;
+    color: #c2997a;
+}
+
+.BarraNavDeslizable nav .socialDeslizable{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.BarraNavDeslizable nav .socialDeslizable a {
+
+    color:#efe5dd;
+    margin: 10px;
+}
+
+.activar {
+  display: none;
+  background: none;
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  top: 10px;
+  right: 10px;
+  border: none;
+  outline: none;
+}
+
+.activar i:hover {
+  color: #c2997a;
+}
+
+.activar i {
+  color: #efe5dd;
+  font-size: 23px;
+}
+
+.cerrar {
+  background: none;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 10px;
+  right: 10px;
+  border: none;
+  outline: none;
+}
+
+.cerrar i:hover {
+  color: #c2997a;
+}
+
+.cerrar i {
+  color: #efe5dd;
+  font-size: 23px;
+}
+
+@media screen and (max-width: 1100px){
+  .activar  {
+    display: inline;
+  }
+  .BarraNavDeslizable nav {
+    display: inline;
+  }
+  .BarraNavDeslizable header img {
+    display: inline;
+    z-index: 3000;
+  }
+  .pantalla {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .BarraNavDeslizable header {
+    background: #1b1b1d;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    height: 70px;
+    
+  }
+  .activar  {
+    position: absolute;
+    right: 10px;
+  }
+  .BarraNavDeslizable header img {
+    position: relative;
+  }
+
+}
+
+@keyframes desplegar {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(100%);
+  }
+}
+
+@keyframes ocultar {
+  from {
+    transform: translate(100%);
+  }
+  to {
+    transform: translate(0%);
+  }
+    
+}

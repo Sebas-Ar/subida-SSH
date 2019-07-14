@@ -1,0 +1,23 @@
+.Detalles {
+    color: #efe5dd;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 200px 50px 50px 60px;
+}
+
+.Detalles h4 {
+    font-size: 21px;
+}
+
+.Detalles p {
+    color: #94867c;
+    font-size: 18px;
+    line-height: 25px;
+    margin-right: 40px;
+}
+
+.Detalles p a {
+    color: #efe5dd;
+    text-decoration: none;
+    font-weight: 900;
+}

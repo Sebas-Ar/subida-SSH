@@ -1,0 +1,58 @@
+.BarraNavPrincipal nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  padding: 0;
+  z-index: 3000;
+}
+
+.BarraNavPrincipal nav img {
+  display: block;
+  margin: auto;
+  padding-top: 18vh;
+  margin-bottom: 40px;
+}
+
+.BarraNavPrincipal nav ul {
+  margin-top: 100px;
+  padding: 0;
+}
+
+.BarraNavPrincipal nav ul li {
+  padding: 9px 0;
+  font-size: 18px;
+  text-align: center;
+  list-style: none;
+}
+
+.BarraNavPrincipal nav ul li a {
+  text-decoration: none;
+  color: #efe5dd;
+}
+
+.BarraNavPrincipal nav ul li a:hover {
+  color: #c2997a;
+}
+
+.BarraNavPrincipal nav ul li a:active {
+  color: #cc8956;
+}
+
+.BarraNavPrincipal nav .social {
+  position: absolute;
+  left:50%;
+  transform: translate(-50%);
+  bottom: 15px;
+}
+ .BarraNavPrincipal nav .social a{
+  color:#efe5dd;
+  margin: 10px;
+}
+
+@media screen and (max-width: 1100px){
+  .BarraNavPrincipal nav{
+    display: none;
+  }
+}
