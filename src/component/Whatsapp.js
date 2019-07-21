@@ -1,34 +1,44 @@
 import React, { Component } from 'react';
 import logo from '../img/logo.png';
 import '../styles/Whatsapp.css';
+const axios = require('axios');
+
 
 export default class Whatsapp extends Component {
 
     state = {
         activacion: false,
         mensaje: "",
-        fecha: "",
-        dispositivo: ""
+        dispositivo: "",
+        total: 0,
+        desk: 0,
+        movil: 0
     }
 
-    toggleWhatsapp = () => {
+    async componentDidMount() {
+        const numeros = await axios.get('http://localhost:4000/api/contador');
+        if (numeros.data[0]) {
+            this.setState({
+                total: numeros.data[0].contTotal,
+                desk: numeros.data[0].contDesk,
+                movil: numeros.data[0].contMovil
+            })
+        } else {
 
-        var animate = "";
-        this.setState.activacion = !this.setState.activacion;
-        this.setState.activacion ? animate = "aparecer .5s forwards" : animate = "desaparecer .5s forwards";
-        document.getElementById('toggle').style.animation = animate;
+            this.setState({
+                total: 0,
+                desk: 0,
+                movil: 0
+            });
+        }
+
 
     }
 
-    onSubmit = e => {
+    toggleWhatsapp = async () => {
 
-        var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-        var diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
-        var f = new Date();
+        let animate = "";
 
-        var http = this.state.mensaje;
-        var numero = "573103131239";
-        
         var mobile = {
             Android: function () {
                 return navigator.userAgent.match(/Android/i);
@@ -52,21 +62,72 @@ export default class Whatsapp extends Component {
 
         try {
             this.setState({
-                fecha: diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear() + ' a las ' + f.getHours() + ':' + f.getMinutes(),
                 dispositivo: mobile.any()[0]
             });
+            if (!this.state.activacion) {
+                this.setState({
+                    movil: this.state.movil + 1
+                });
+            }
         }
         catch {
             this.setState({
-                fecha: diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear() + ' a las ' + f.getHours() + ':' + f.getMinutes(),
-                dispositivo: "PC"
+                dispositivo: "Desktop"
+            });
+            if (!this.state.activacion) {
+                this.setState({
+                    desk: this.state.desk + 1
+                });
+            }
+        }
+
+        this.setState({
+            activacion: !this.state.activacion
+        });
+        this.state.activacion ? animate = "desaparecer .5s forwards" : animate = "aparecer .5s forwards";
+        document.getElementById('toggle').style.animation = animate;
+        if (!this.state.activacion) {
+            this.setState({
+                total: this.state.total + 1
             });
         }
-        
-        window.open('https://web.whatsapp.com/send?phone=' + numero + '&text=' + http, '_blank');
 
+        const numeros = await axios.get('http://localhost:4000/api/contador');
+
+        if(!numeros.data[0]){
+            await axios.post('http://localhost:4000/api/contador', {
+                contDesk: 0,
+                contMovil: 0,
+                contTotal: 0
+            });
+            console.log('numeros creados');
+        } else {
+            await axios.put(`http://localhost:4000/api/contador/${numeros.data[0]._id}`,{
+                contTotal: this.state.total,
+                contDesk: this.state.desk,
+                contMovil: this.state.movil
+            })
+        }
+
+
+    }
+
+    onSubmit = async e => {
         e.preventDefault();
-        
+
+        var http = this.state.mensaje;
+        var numero = "573103131239";
+
+        await axios.post('http://localhost:4000/api/whatsapp', {
+            mensaje: this.state.mensaje,
+            dispositivo: this.state.dispositivo
+        });
+
+        window.open(`https://web.whatsapp.com/send?phone=${numero}&text=${http}`, '_blank');
+
+        this.setState({
+            mensaje: ""
+        })
     }
 
     onChange = e => {

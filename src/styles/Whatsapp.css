@@ -9,6 +9,7 @@
     font-size: 14px;
     border: none;
     outline: none;
+    z-index: 2000;
 }
 .Whatsapp .accionar i {
     font-size: 15px;
@@ -17,18 +18,20 @@
 .Whatsapp .formulario {
     position: fixed;
     right: 15px;
-    bottom: 65px;
+    bottom: 100px;
     height: 300px;
     width: 240px;
     text-align: center;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 6fr 1fr;
-    transform: translateY(120%);
+    transform: translateY(140%);
+    z-index: 2000;
 }
 
 .Whatsapp .formulario .close{
     margin-top: 15px;
+    margin-bottom: 8px;
     grid-column: 1/3;
     justify-self: right;
     font-size: 20px;
@@ -106,21 +109,25 @@
 @keyframes aparecer {
     from {
         opacity: 0;
+        display: none;
         transform: translateY(120%);
     }
     to {
         opacity: 1;
-        transform: translateY(0%);
+        display: inline;
+        transform: translateY(-5%);
     }
 }
 
 @keyframes desaparecer {
     from {
         opacity: 1;
-        transform: translateY(0%);
+        display: inline;
+        transform: translateY(-5%);
     }
     to {
         opacity: 0;
-        transform: translateY(120%);
+        display: none;
+        transform: translateY(140%);
     }
 }

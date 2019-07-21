@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../img/logo.png';
+import { Link } from 'react-router-dom';
 import '../styles/BarraNavPrincipal.css';
 
 
@@ -12,11 +13,11 @@ export default class BarraNavPrincipal extends Component {
           <img src={logo} alt="logo" />
 
           <ul>
-            <li><a href="http://localhost:3000/">Home</a></li>
-            <li><a href="https://reactjs.org" rel="noopener noreferrer" target="_blank">Photograph</a></li>
-            <li><a href="https://reactjs.org" rel="noopener noreferrer" target="_blank">Details</a></li>
-            <li><a href="https://reactjs.org" rel="noopener noreferrer" target="_blank">Get in touch</a></li>
-            <li><a href="https://reactjs.org" rel="noopener noreferrer" target="_blank">About me</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/mensajes">Photograph</Link></li>
+            <li><Link to="/details">Details</Link></li>
+            <li><Link to="/about-me">Get in touch</Link></li>
+            <li><Link to="/get-in-touch">About me</Link></li>
           </ul>
 
           <div className="social">

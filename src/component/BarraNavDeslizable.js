@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import logo2 from '../img/logo2.png';
 import '../styles/BarraNavDeslizable.css';
 
@@ -11,9 +12,10 @@ export default class BarraNavDeslizable extends Component {
 
     toggle = () => {
         var animate = "";
-        this.setState.activacion = !this.setState.activacion;
-        console.log(this.state.activacion);
-        this.setState.activacion ? animate = "ocultar .5s forwards" : animate = "desplegar .5s forwards";
+        this.setState({
+            activacion: !this.state.activacion
+        });
+        this.state.activacion ? animate = "desplegar .5s forwards" : animate = "ocultar .5s forwards";
         document.getElementById('change').style.animation = animate;
         document.getElementById('darkness').style.animation = animate;
     }
@@ -30,11 +32,11 @@ export default class BarraNavDeslizable extends Component {
                 <nav id="change">
                     <button className="cerrar" onClick={this.toggle}><i className="fas fa-times"></i></button>
                     <ul>
-                        <li><a href="http://localhost:3000/">Home</a></li>
-                        <li><a href="https://reactjs.org" rel="noopener noreferrer" target="_blank">Photograph</a></li>
-                        <li><a href="https://reactjs.org" rel="noopener noreferrer" target="_blank">Details</a></li>
-                        <li><a href="https://reactjs.org" rel="noopener noreferrer" target="_blank">Get in touch</a></li>
-                        <li><a href="https://reactjs.org" rel="noopener noreferrer" target="_blank">About me</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/mensajes">Photograph</Link></li>
+                        <li><Link to="/">Details</Link></li>
+                        <li><Link to="/">Get in touch</Link></li>
+                        <li><Link to="/">About me</Link></li>
                     </ul>
 
                     <div className="socialDeslizable">

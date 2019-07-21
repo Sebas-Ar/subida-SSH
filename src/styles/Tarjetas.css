@@ -2,15 +2,16 @@
     display: inline-block;
     height: 233px;
     width: 178px;
-    padding: 50px 25px 35px;
+    padding: 50px 24px 35px;
+    margin-right: 4px;
 }
 
 .Tarjetas:hover {
     height: 231px;
     width: 176px;
     animation: bord 1.7s forwards;
-    padding: 49px 24px 36px;
-    margin-right: 2px;
+    padding: 49px 23px 36px;
+    margin-right: 6px;
 }
 
 .Tarjetas h3{
@@ -34,5 +35,53 @@
     }
     to {
         border: 1px solid #f5e5d999;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .Tarjetas {
+        width: 120px;
+    }
+
+    .Tarjetas:hover {
+        width: 118px;
+    }
+
+    .Tarjetas img {
+        height: 40px;
+    }
+
+    .Tarjetas h3{
+        margin: 35px 0;
+        font-size: 20px;
+    }
+
+    .Tarjetas p{
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    .Tarjetas {
+        width: 120px;
+    }
+
+    .Tarjetas:hover {
+        width: 118px;
+    }
+
+    .Tarjetas img {
+        height: 40px;
+    }
+
+    .Tarjetas h3{
+        margin: 35px 0;
+        font-size: 20px;
+    }
+
+    .Tarjetas p{
+        font-size: 14px;
+        line-height: 24px;
     }
 }

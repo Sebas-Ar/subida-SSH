@@ -1,14 +1,28 @@
 import React, { Component } from 'react'
 import '../styles/Footer.css';
 
+var timer = null;
+
 export default class Footer extends Component {
 
+    
+    contador = () => {
+
+        var i = window.scrollY;
+        window.scrollTo(0, i - 15);
+        if (window.scrollY === 0) clearInterval(timer)
+        
+    }
+
     scroll = () => {
-        console.log(window.clientHeight);
-        /* window.scrollTo(0, 0); */
+
+        timer = setInterval(this.contador, 1);
+        
     }
 
     render() {
+        
+        
         return (
             <footer>
                 <p> © 2019 BePhoto 2 - BeTheme. All Rights Reserved. <a href="http://localhost:3000/" rel="noopener noreferrer">Muffin group</a></p>

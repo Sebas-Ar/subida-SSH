@@ -1,5 +1,4 @@
 footer {
-    
     display: grid;
     grid-template-columns: 30px 8fr 1.5fr .5fr 40px;
     width: 100%;

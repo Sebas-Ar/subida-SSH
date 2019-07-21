@@ -1,20 +1,27 @@
 .Presentacion {
     margin-top: 100px;
     color: #efe5dd;
-    margin-left: 70px;
+    margin-left: 2rem;
 }
 .Presentacion h4 {
     font-size: 20px;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
 }
 
 .Presentacion h5 {
     margin-top: 40px;
-    font-size: 37px;
-    letter-spacing: 4px;
+    font-size: 39px;
+    letter-spacing: 5px;
+    line-height: 50px;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1240px) {
+    .Presentacion {
+        margin-left:10%;
+    }
+}
+
+@media screen and (max-width: 960px) {
     .Presentacion h4 {
         font-size: 16px;
         letter-spacing: 3px;
@@ -23,5 +30,12 @@
         margin-top: 32px;
         font-size: 30px;
         letter-spacing: 3px;
+        line-height: 45px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .Presentacion {
+        margin-left:20%;
     }
 }
