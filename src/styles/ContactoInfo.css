@@ -1,0 +1,108 @@
+.ContactoInfo {
+    margin: 60px 0 0px 0;
+    height: 600px;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.ContactoInfo h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.ContactoInfo .parrafo {
+    width: 450px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.ContactoInfo .form {
+    width: 700px;
+}
+
+.ContactoInfo form, .ContactoInfo .info {
+    z-index: 3000;
+}
+
+.ContactoInfo form {
+    background: white;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr .5fr 1fr .5fr 2fr 1.4fr;
+    /* border: 1px solid black; */
+    padding: 20px;
+    padding-top: 10px;
+    box-shadow: -5px 5px 15px 0px rgba(0, 0, 0, 0.192);
+}
+
+.ContactoInfo form h3 {
+    grid-column: 1/3;
+}
+
+.ContactoInfo form input, .ContactoInfo form textarea {
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.151);
+}
+
+.ContactoInfo form label:nth-child(2), .ContactoInfo form input:nth-child(4) {
+    margin-right: 15px;
+}
+
+.ContactoInfo form label:nth-child(3), .ContactoInfo form input:nth-child(5) {
+    margin-left: 15px;
+}
+
+.ContactoInfo form label {
+    font-size: 13px;
+    align-self: flex-end;
+    color: rgba(0, 0, 0, 0.637);
+}
+.ContactoInfo form input {
+    height: 20px;
+    align-self: center;
+    outline: none;
+}
+
+.ContactoInfo form label:nth-child(6) {
+    grid-column: 1/3;
+    align-self: flex-start;
+}
+
+.ContactoInfo form textarea {
+    grid-column: 1/3;
+    outline: none;
+}
+
+.ContactoInfo form button {
+    border: none;
+    border-radius: 5px;
+    background: rgb(10, 10, 36);
+    color: white;
+    margin-top: 15px;
+}
+
+.ContactoInfo .info {
+    background: rgba(204,46,55);
+    color: white;
+    padding: 20px;
+    padding-top: 10px;
+    box-shadow: -5px 20px 15px -10px rgba(0, 0, 0, 0.192);
+}
+
+.ContactoInfo .info h3 {
+    font-weight: 100;
+}
+
+.ContactoInfo .info p {
+    font-size: 12px;
+}
+
+.ContactoInfo .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

@@ -5,6 +5,7 @@ footer {
     margin:100px 0 0 0;
     padding: 0;
     border-top: 1px solid #ffffff10;
+    background: rgb(10, 10, 36);
 }
 
 footer p {
@@ -13,12 +14,6 @@ footer p {
     color: #94867c;
     padding: 0;
     margin: 20px;
-}
-
-footer p a {
-    text-decoration: none;
-    color: #efe5dd;
-    font-weight: bold;
 }
 
 footer .socialFooter {

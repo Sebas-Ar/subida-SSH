@@ -1,0 +1,136 @@
+.Contactenos {
+    margin:100px 0 -155px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: .3fr 1fr 1fr .8fr;
+}
+
+.Contactenos .bloque {
+    width: 100%;
+    height: 150px;
+    background: rgba(204,46,55);
+    align-self: center;
+}
+
+.Contactenos h2 {
+    align-self: center;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.Contactenos form {
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr .5fr 1fr .5fr 2fr 1.4fr;
+    padding: 20px;
+    padding-top: 10px;
+    box-shadow: -5px 5px 15px 0px rgba(0, 0, 0, 0.192);
+    background: white;
+}
+
+.Contactenos form h3 {
+    grid-column: 1/3;
+}
+
+.Contactenos form input, .Contactenos form textarea {
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.151);
+}
+
+.Contactenos form label:nth-child(2), .Contactenos form input:nth-child(4) {
+    margin-right: 15px;
+}
+
+.Contactenos form label:nth-child(3), .Contactenos form input:nth-child(5) {
+    margin-left: 15px;
+}
+
+.Contactenos form label {
+    font-size: 13px;
+    align-self: flex-end;
+    color: rgba(0, 0, 0, 0.637);
+}
+.Contactenos form input {
+    height: 20px;
+    align-self: center;
+    outline: none;
+}
+
+.Contactenos form label:nth-child(6) {
+    grid-column: 1/3;
+    align-self: flex-start;
+}
+
+.Contactenos form textarea {
+    grid-column: 1/3;
+    outline: none;
+}
+
+.Contactenos form button {
+    border: none;
+    border-radius: 5px;
+    background: rgb(10, 10, 36);
+    color: white;
+    margin-top: 15px;
+}
+
+.Contactenos .info {
+    background: rgba(204,46,55);
+    color: white;
+    padding: 20px;
+    padding-top: 10px;
+    box-shadow: -5px 5px 15px 0px rgba(0, 0, 0, 0.192);
+}
+
+.Contactenos .info h3 {
+    font-weight: 100;
+}
+
+.Contactenos .info p {
+    font-size: 12px;
+}
+
+.Contactenos iframe {
+    grid-column: 1/5;
+    z-index: -1;
+    transform: translateY(-70px);
+    height: 400px;
+}
+
+.Contactenos .dos {
+    display: none;
+}
+
+.Contactenos .tres {
+    display: none;
+}
+
+.Contactenos .botones {
+    transform: translateY(-70px);
+    justify-self: flex-start;
+    margin-left: 140px;
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+
+.Contactenos .botones button {
+    background: rgba(204,46,55);
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.Contactenos .botones button:hover {
+    background: rgb(226, 56, 64);
+}
+
+.Contactenos .botones button:nth-child(1) {
+    border-radius: 5px 0 0 0;
+}
+
+.Contactenos .botones button:nth-child(3) {
+    border-radius: 0 5px 0 0;
+}

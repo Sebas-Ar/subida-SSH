@@ -1,0 +1,10 @@
+.Imagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 220px 100px 120px 100px;
+}
+
+.Imagenes img {
+    height: 100px;
+    margin: auto;
+}

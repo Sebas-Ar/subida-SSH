@@ -1,0 +1,41 @@
+.Presentacion2 {
+    background: rgb(59, 58, 56);
+    color: white;
+    height: 300px;
+    padding-top: 125px;
+    padding-bottom: 150px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.Presentacion2 h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.Presentacion2 h1 span {
+    display: block;
+}
+
+.Presentacion2 .linea {
+    align-self: center;
+    background: rgba(204,46,55);
+    width: 200px;
+    height: 10px;
+}
+
+.Presentacion2 .titulo1 {
+    align-self: flex-end;
+    font-size: 62px;
+}
+
+.Presentacion2 .titulo2 {
+    font-size: 75px;
+}
+
+.Presentacion2 p {
+    width: 500px;
+    text-align: center;
+}

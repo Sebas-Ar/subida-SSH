@@ -1,0 +1,53 @@
+.TituloAlterno {
+    margin-top: 100px;
+    display: grid;
+    grid-template-rows: .2fr 1fr 1fr;
+    grid-template-columns: .5fr 4fr 4fr;
+}
+
+.TituloAlterno h1, .TituloAlterno p {
+    grid-column: 2/3;
+}
+
+.TituloAlterno .titulo1 {
+        height: 0;
+        font-size: 50px;
+        align-self: flex-end;
+}
+
+.TituloAlterno .titulo2 {
+    color: white;
+        font-size: 60px;
+        padding: 25px;
+        width: 400px;
+        text-align: center;
+        background: rgba(204,46,55);
+        justify-self: flex-start;
+        align-self: flex-start;
+        border-radius: 80px;
+        box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.479);
+}
+
+
+.TituloAlterno p {
+    align-self: center;
+}
+
+.TituloAlterno img {
+    height: 300px;
+    grid-column: 3/4;
+    grid-row: 1/4;
+    align-self: center;
+    justify-self: flex-start;
+}
+
+.TituloAlterno .linea {
+    background: rgb(0, 0, 0);
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 3px;
+    height: 60px;
+    justify-self: flex-end;
+    align-self: center;
+    margin-right:10px ;
+}

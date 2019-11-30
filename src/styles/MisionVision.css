@@ -1,0 +1,71 @@
+.MisionVision {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr .7fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+    height: 200px;
+}
+.MisionVision .linea1, .MisionVision .linea2 {
+    height: 110px;
+    width: 12px;
+    background: rgba(204,46,55);
+    margin: 0 60px;
+}
+
+.MisionVision img {
+    height: 50px;
+}
+
+.MisionVision img:nth-child(1) {
+    grid-column: 2/3;
+}
+
+.MisionVision img:nth-child(2) {
+    grid-column: 4/5;
+}
+
+.MisionVision .linea1 {
+    grid-row: 2/4;
+    grid-column: 1/2;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.MisionVision .linea2 {
+    grid-row: 2/4;
+    grid-column: 5/6;
+    justify-self: flex-start;
+    align-self: flex-end;
+}
+
+.MisionVision .tit1 {
+    grid-column: 2/3;
+}
+
+.MisionVision .tit2 {
+    grid-column: 4/5;
+}
+
+.MisionVision .tit1, .MisionVision .tit2 {
+    grid-row: 2/3;
+    background: rgba(204,46,55);
+    padding: 5px 30px;
+    border-radius: 20px;
+    color: white;
+}
+
+.MisionVision p {
+    font-size: 14px;
+    color: rgb(61, 58, 53);
+}
+
+.MisionVision .cont1 {
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+
+.MisionVision .cont2 {
+    grid-row: 3/4;
+    grid-column: 5/4;
+}

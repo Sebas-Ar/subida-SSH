@@ -1,0 +1,48 @@
+.NuestroEquipo {
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: 1fr .8fr;
+    color: white;
+}
+
+.NuestroEquipo h1 {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    background: rgba(204,46,55);
+    padding: 16px 38px;
+    border-radius: 32px;
+    box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.651);
+}
+
+.NuestroEquipo .personas {
+    margin-top: 70px;
+    background: rgb(10, 10, 36);
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: .5fr 1fr 1fr 1fr 1fr .5fr;
+    height: 120px;
+    justify-items: center;
+    text-align: center;
+}
+
+.NuestroEquipo .personas img {
+    height: 150px;
+}
+
+.NuestroEquipo .personas .persona1 {
+    grid-column: 2/3;
+}
+
+.NuestroEquipo .persona {
+    transform: translateY(-45%);
+    height: 180px;
+}
+
+.NuestroEquipo .persona h4, .NuestroEquipo .persona p {
+    margin: 0;
+}
+
+.NuestroEquipo .persona p {
+    font-size: 10px;
+}

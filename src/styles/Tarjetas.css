@@ -1,43 +1,49 @@
 .Tarjetas {
     display: inline-block;
     height: 233px;
-    width: 178px;
-    padding: 50px 24px 35px;
-    margin-right: 4px;
+    width: 220px;
+    margin: 50px 35px;
 }
 
-.Tarjetas:hover {
-    height: 231px;
-    width: 176px;
-    animation: bord 1.7s forwards;
-    padding: 49px 23px 36px;
-    margin-right: 6px;
+.Tar {
+    margin: auto;
 }
+
+.Tar .Tarjetas h3::after {
+    content: "";
+    margin: 18px auto 0 auto;
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 3px;
+    border-radius: 10px;
+    background: rgba(66, 64, 64, 0.712);
+}
+
 
 .Tarjetas h3{
-    color: #f5e5d9;
-    font-size: 22px;
+    text-align: center;
+    color: #000000;
+    font-size: 25px;
     letter-spacing: 2px;
 }
 
 .Tarjetas p{
-    color: #f5e5d9;
-    font-size: 18px;
+    color: rgba(66, 64, 64, 0.712);
+    font-size: 12px;
     line-height: 24px;
 }
 .Tarjetas a {
     text-decoration: none;
 }
 
-@keyframes bord {
-    from {
-        border: 1px solid #f5e5d900;
-    }
-    to {
-        border: 1px solid #f5e5d999;
-    }
+.Tarjetas img {
+    display: block;
+    margin: auto;
+    width: 70px;
 }
 
+/* 
 @media screen and (max-width: 1030px) {
     .Tarjetas {
         width: 120px;
@@ -84,4 +90,4 @@
         font-size: 14px;
         line-height: 24px;
     }
-}
+} */

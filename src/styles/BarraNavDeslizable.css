@@ -1,17 +1,5 @@
-.BarraNavDeslizable header {
-  width: 100%;
-  height: 50px;
-  background: none;
-}
-
-.BarraNavDeslizable header img {
-  display: none;
-  margin: 10px;
-  position: fixed;
-}
-
 .pantalla {
-  display: none;
+  /* display: none; */
   position: fixed;
   top: 0;
   left: 0;
@@ -19,80 +7,242 @@
   height: 100vh;
   background: #0e0e0fcc;
   z-index: 4000;
-  transform: translate(100%);
+  transform: translate(120%);
 }
 
 .BarraNavDeslizable nav {
-    display: none;
-    background: #1b1b1d;
+    /* display: none; */
+    background: #740d0d;
     height: 100vh;
-    width: 233px;
+    width: 263px;
     position: fixed;
+    transform: translateX(-120%);
     top: 0;
-    right: 0;
+    left: 0;
     padding: 0;
-    transform: translate(100%);
     z-index: 4200;
-
 }
 
-.BarraNavDeslizable nav ul {
-    margin-top: 60px;
+
+.BarraNavDeslizable > nav > ul {
     margin-bottom: 30px;
     padding: 0;
 }
 
-.BarraNavDeslizable nav ul li {
+.BarraNavDeslizable nav > ul > li {
     list-style: none;
-    border-top: 1px solid #ffffff10;
-    padding: 13px;
+    padding: 13px 23px;
 }
 
-.BarraNavDeslizable nav ul li:nth-child(5){
-    border-bottom: 1px solid #ffffff10;
-}
 
 .BarraNavDeslizable nav ul li a {
     text-decoration: none;
     color: #efe5dd;
+    margin-left: 20px;
+    font-size: 15px;
 }
 
 .BarraNavDeslizable nav ul li a:hover {
     text-decoration: none;
-    color: #c2997a;
+    color: #796d65;
 }
+
+.BarraNavDeslizable nav ul li .punto {
+  display: inline-block;
+  background: #fff;
+  border-radius: 50%;
+  width: 11px;
+  height: 11px;
+}
+
+.BarraNavDeslizable nav ul li .punto::after{
+  content:"";
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+  width: 3px;
+  background: #fff;
+}
+
+
+.BarraNavDeslizable nav ul li .puntoCerrar {
+  display: inline-block;
+  background: #fff;
+  border-radius: 50%;
+  width: 11px;
+  height: 11px;
+}
+
+
+.BarraNavDeslizable nav > ul > .lista {
+  animation: al-no 1s forwards linear;
+}
+
+.BarraNavDeslizable nav > ul > .lista:hover {
+  animation: al 1s forwards linear;
+}
+
+.BarraNavDeslizable nav > ul > .lista > ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  animation: alargar-reversa 1s forwards linear;
+}
+
+.BarraNavDeslizable nav > ul > .lista > ul > li {
+  padding: 10px 0 4px 0;
+  
+}
+
+.BarraNavDeslizable nav > ul > .lista:hover > ul {
+  display: inline-block;
+  animation: alargar 1s forwards linear;
+}
+
+.BarraNavDeslizable nav ul li ul li a {
+  font-size: 14px;
+  position: relative;
+  display: block;
+}
+
+.BarraNavDeslizable nav > ul > .lista:hover > ul li a {
+  display: inline-block;
+}
+
+.BarraNavDeslizable nav > ul > .lista > .punto::after {
+  animation: linea-reversa .7s linear forwards;
+}
+
+.BarraNavDeslizable nav > ul > .lista:hover > .punto::after {
+  animation: linea .7s forwards linear;
+}
+
 
 .BarraNavDeslizable nav .socialDeslizable{
     position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 20px;
     left: 50%;
     transform: translate(-50%);
 }
 
 .BarraNavDeslizable nav .socialDeslizable a {
-
     color:#efe5dd;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.BarraNavDeslizable nav .socialDeslizable a img{
+  height: 18px;
+  margin: 0 9px;
 }
 
 .activar {
-  display: none;
-  background: none;
-  position: fixed;
-  height: 40px;
-  width: 40px;
-  top: 10px;
-  right: 10px;
+  overflow: hidden;
+  background: #cc2e37;
+  position: absolute;
+  width: 8vw;
+  top: 45px;
+  left: 45px;
   border: none;
   outline: none;
+  padding: 10px 30px;
+  box-shadow: 0 5px 5px #00000055;
 }
 
-.activar i:hover {
-  color: #c2997a;
+.activar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #ffffff22;
 }
+
+.activar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,transparent, #ffffff77, transparent);
+  transition: 0.5s;
+}
+
+.activar:hover::after {
+  left: 100%;
+}
+
 
 .activar i {
-  color: #efe5dd;
-  font-size: 23px;
+  color: #ffffff;
+  font-size: 2.5vw;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.activar span {
+  position: absolute;
+  transition: .5s ease;
+  background: rgb(218, 207, 229);
+}
+
+.activar span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  transform: translateX(-100%);
+}
+
+.activar:hover span:nth-child(1) {
+  width: 100%;
+  transform: translateX(100%);
+}
+
+.activar span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 1px;
+  transform: translateX(100%);
+}
+
+.activar:hover span:nth-child(3) {
+  width: 100%;
+  transform: translateX(-100%);
+}
+
+.activar span:nth-child(2) {
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 1px;
+  transform: translateY(100%);
+}
+
+.activar:hover span:nth-child(2) {
+  height: 100%;
+  transform: translateY(-100%);
+}
+
+.activar span:nth-child(4) {
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 1px;
+  transform: translateY(-100%);
+}
+
+.activar:hover span:nth-child(4) {
+  height: 100%;
+  transform: translateY(100%);
 }
 
 .cerrar {
@@ -101,7 +251,7 @@
   height: 40px;
   width: 40px;
   top: 10px;
-  right: 10px;
+  right: 0px;
   border: none;
   outline: none;
 }
@@ -112,43 +262,101 @@
 
 .cerrar i {
   color: #efe5dd;
-  font-size: 23px;
+  font-size: 20px;
 }
 
-@media screen and (max-width: 1240px){
+/* @media screen and (max-width: 1240px){
   .activar  {
     display: inline;
   }
   .BarraNavDeslizable nav {
     display: inline;
   }
-  .BarraNavDeslizable header img {
-    display: inline;
-    z-index: 3000;
+  
+} */
+
+@keyframes al {
+  from {
+    height: 25px;
   }
-  .pantalla {
-    display: inline;
-    transform: translate(120%);
+   
+  to {
+    height: 275px;
   }
 }
 
-@media screen and (max-width: 750px){
-  .BarraNavDeslizable header {
-    background: #1b1b1d;
-    position: fixed;
-    z-index: 2000;
-    top: 0;
-    height: 70px;
-    
+@keyframes al-no {
+  from {
+    height: 275px;
   }
-  .activar  {
-    position: absolute;
-    right: 10px;
+   
+  to {
+    height: 25px;
   }
-  .BarraNavDeslizable header img {
-    position: relative;
+}
+
+
+@keyframes color {
+  to {
+    background: #181857;
+  }
+}
+
+@keyframes linea {
+  from {
+    height: 120px;
+  }
+  to {
+    height: 310px;
+  }
+}
+
+@keyframes linea-reversa {
+  from {
+    height: 310px;
+  }
+  80% {
+    height: 280px;
+  }
+  to {
+    height: 120px;
+  }
+}
+
+@keyframes alargar {
+  0% {
+    height: 0px;
+    opacity: 0;
+    margin: 0px 0;
   }
 
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    margin: 5px 0;
+    height: 240px;
+    opacity: 1;
+  }
+}
+
+@keyframes alargar-reversa {
+  0% {
+    margin: 5px 0;
+    height: 240px;
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  100% {
+    height: 0px;
+    opacity: 0;
+    margin: 0px 0;
+  }
 }
 
 @keyframes desplegar {
@@ -156,13 +364,13 @@
     transform: translate(0%);
   }
   to {
-    transform: translate(120%);
+    transform: translate(-120%);
   }
 }
 
 @keyframes ocultar {
   from {
-    transform: translate(120%);
+    transform: translate(-120%);
   }
   to {
     transform: translate(0%);
